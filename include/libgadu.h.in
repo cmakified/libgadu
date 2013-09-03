@@ -48,58 +48,58 @@ extern "C" {
 /** \cond ignore */
 
 /* Defined if libgadu was compiled for bigendian machine. */
-#undef GG_CONFIG_BIGENDIAN
+#cmakedefine GG_CONFIG_BIGENDIAN
 
 /* Defined if this machine has gethostbyname_r(). */
-#undef GG_CONFIG_HAVE_GETHOSTBYNAME_R
+#cmakedefine GG_CONFIG_HAVE_GETHOSTBYNAME_R
 
 /* Defined if libgadu was compiled and linked with fork support. */
-#undef GG_CONFIG_HAVE_FORK
+#cmakedefine GG_CONFIG_HAVE_FORK
 
 /* Defined if libgadu was compiled and linked with pthread support. */
-#undef GG_CONFIG_HAVE_PTHREAD
+#cmakedefine GG_CONFIG_HAVE_PTHREAD
 
 /* Defined if pthread resolver is the default one. */
-#undef GG_CONFIG_PTHREAD_DEFAULT 
+#cmakedefine GG_CONFIG_PTHREAD_DEFAULT 
 
 /* Defined if this machine has C99-compiliant vsnprintf(). */
-#undef GG_CONFIG_HAVE_C99_VSNPRINTF
+#cmakedefine GG_CONFIG_HAVE_C99_VSNPRINTF
 
 /* Defined if this machine has va_copy(). */
-#undef GG_CONFIG_HAVE_VA_COPY
+#cmakedefine GG_CONFIG_HAVE_VA_COPY
 
 /* Defined if this machine has __va_copy(). */
-#undef GG_CONFIG_HAVE___VA_COPY
+#cmakedefine GG_CONFIG_HAVE___VA_COPY
 
 /* Defined if this machine supports long long. */
-#undef GG_CONFIG_HAVE_LONG_LONG
+#cmakedefine GG_CONFIG_HAVE_LONG_LONG
 
 /* Defined if libgadu was compiled and linked with GnuTLS support. */
-#undef GG_CONFIG_HAVE_GNUTLS
+#cmakedefine GG_CONFIG_HAVE_GNUTLS
 
 /* Defined if libgadu was compiled and linked with OpenSSL support. */
-#undef GG_CONFIG_HAVE_OPENSSL
+#cmakedefine GG_CONFIG_HAVE_OPENSSL
 
 /* Defined if libgadu was compiled and linked with zlib support. */
-#undef GG_CONFIG_HAVE_ZLIB
+#cmakedefine GG_CONFIG_HAVE_ZLIB
 
 /* Defined if uintX_t types are defined in <stdint.h>. */
-#undef GG_CONFIG_HAVE_STDINT_H
+#cmakedefine GG_CONFIG_HAVE_STDINT_H
 
 /* Defined if uintX_t types are defined in <inttypes.h>. */
-#undef GG_CONFIG_HAVE_INTTYPES_H
+#cmakedefine GG_CONFIG_HAVE_INTTYPES_H
 
 /* Defined if uintX_t types are defined in <sys/inttypes.h>. */
-#undef GG_CONFIG_HAVE_SYS_INTTYPES_H
+#cmakedefine GG_CONFIG_HAVE_SYS_INTTYPES_H
 
 /* Defined if uintX_t types are defined in <sys/int_types.h>. */
-#undef GG_CONFIG_HAVE_SYS_INT_TYPES_H
+#cmakedefine GG_CONFIG_HAVE_SYS_INT_TYPES_H
 
 /* Defined if uintX_t types are defined in <sys/types.h>. */
-#undef GG_CONFIG_HAVE_SYS_TYPES_H
+#cmakedefine GG_CONFIG_HAVE_SYS_TYPES_H
 
 /* Defined if this machine has uint64_t. */
-#undef GG_CONFIG_HAVE_UINT64_T
+#cmakedefine GG_CONFIG_HAVE_UINT64_T
 
 #ifdef GG_CONFIG_HAVE_OPENSSL
 #include <openssl/ssl.h>
@@ -1697,7 +1697,7 @@ int gg_dcc7_handle_reject(struct gg_session *sess, struct gg_event *e, const voi
 #define GG_HAS_AUDIO_MASK 0x40000000
 #define GG_HAS_AUDIO7_MASK 0x20000000
 #define GG_ERA_OMNIX_MASK 0x04000000
-#undef GG_LIBGADU_VERSION
+#cmakedefine GG_LIBGADU_VERSION "@GG_LIBGADU_VERSION@"
 
 #ifndef DOXYGEN
 
