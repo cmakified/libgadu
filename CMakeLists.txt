@@ -3,6 +3,7 @@ project (libgadu C)
 
 set (GG_LIBGADU_VERSION "1.12.0-pre")
 option (libgadu_build_examples "Build examples" ON)
+option (libgadu_build_tests "Build automatic tests" ON)
 
 find_program (protoc_c_EXECUTABLE protoc-c)
 if (NOT protoc_c_EXECUTABLE)
@@ -163,4 +164,8 @@ set_target_properties(gadu PROPERTIES
 	SOVERSION 3.13)
 if (libgadu_build_examples)
 	add_subdirectory (examples)
+endif ()
+if (libgadu_build_tests)
+	enable_testing ()
+	add_subdirectory (test)
 endif ()
